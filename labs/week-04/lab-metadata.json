@@ -7,6 +7,10 @@
   "originalCommit": "",
   "pullRequestUrl": "",
   "submissionTag": "",
+<<<<<<< HEAD
   "testStatus": "pass"
+=======
+  "testStatus": "pass",
+>>>>>>> 298e5cf (Complete week 01-03)
   "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub"
 }

@@ -1,10 +1,17 @@
 {
   "week": "week-03",
   "title": "Responsive Web UI & Form Interaction",
+<<<<<<< HEAD
   "status": "completed",
   "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "",
   "originalCommit": "",
+=======
+  "status": "ready",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/Aonney/engse203-lab03-68543210077-2",
+  "originalCommit": "3922e49",
+>>>>>>> 298e5cf (Complete week 01-03)
   "pullRequestUrl": "",
   "submissionTag": "",
   "testStatus": "pass",

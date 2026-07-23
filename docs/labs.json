@@ -13,54 +13,54 @@
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-01/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-01/labs/week-01/source",
     "hasPublish": false,
-    "sourceEntries": 0
+    "sourceEntries": 5
   },
   {
     "week": "week-02",
     "title": "Modern JavaScript Learning Dashboard",
-    "status": "draft",
-    "sourceOrigin": "course-starter",
-    "originalRepoUrl": "",
-    "originalCommit": "",
+    "status": "ready",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/Aonney/engse203-lab02-68543210077-2",
+    "originalCommit": "d900c0b",
     "pullRequestUrl": "",
     "submissionTag": "",
-    "testStatus": "not-tested",
+    "testStatus": "pass",
     "notes": "นำ Vite build output ที่มี index.html เข้า publish/",
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-02/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-02/labs/week-02/source",
     "hasPublish": true,
-    "sourceEntries": 11
+    "sourceEntries": 10
   },
   {
     "week": "week-03",
     "title": "Responsive Web UI & Form Interaction",
-    "status": "draft",
-    "sourceOrigin": "course-starter",
-    "originalRepoUrl": "",
-    "originalCommit": "",
+    "status": "ready",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/Aonney/engse203-lab03-68543210077-2",
+    "originalCommit": "3922e49",
     "pullRequestUrl": "",
     "submissionTag": "",
-    "testStatus": "not-tested",
+    "testStatus": "pass",
     "notes": "Static site ต้องมี index.html ที่ publish root",
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-03/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-03/labs/week-03/source",
     "hasPublish": true,
-    "sourceEntries": 9
+    "sourceEntries": 8
   },
   {
     "week": "week-04",
     "title": "React Campus Service Request",
-    "status": "draft",
-    "sourceOrigin": "course-starter",
+    "status": "completed",
+    "sourceOrigin": "migrated-repository",
     "originalRepoUrl": "",
     "originalCommit": "",
     "pullRequestUrl": "",
     "submissionTag": "",
-    "testStatus": "not-tested",
+    "testStatus": "pass",
     "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub",
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-04/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-04/labs/week-04/source",
     "hasPublish": false,
-    "sourceEntries": 0
+    "sourceEntries": 10
   }
 ]

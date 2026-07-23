@@ -1,16 +1,16 @@
 {
   "week": "week-04",
   "title": "React Campus Service Request",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
+  "status": "completed",
+  "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "",
   "originalCommit": "",
   "pullRequestUrl": "",
   "submissionTag": "",
-  "testStatus": "not-tested",
+  "testStatus": "pass",
   "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub",
   "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-04/",
   "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-04/labs/week-04/source",
   "hasPublish": false,
-  "sourceEntries": 0
+  "sourceEntries": 10
 }

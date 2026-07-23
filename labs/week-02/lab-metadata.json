@@ -1,15 +1,6 @@
 {
   "week": "week-02",
   "title": "Modern JavaScript Learning Dashboard",
-<<<<<<< HEAD
-  "status": "completed",
-  "sourceOrigin": "migrated-repository",
-  "originalRepoUrl": "",
-  "originalCommit": "",
-  "pullRequestUrl": "",
-  "submissionTag": "",
-  "testStatus": "pass"
-=======
   "status": "ready",
   "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "https://github.com/Aonney/engse203-lab02-68543210077-2",
@@ -17,6 +8,5 @@
   "pullRequestUrl": "",
   "submissionTag": "",
   "testStatus": "pass",
->>>>>>> 298e5cf (Complete week 01-03)
   "notes": "นำ Vite build output ที่มี index.html เข้า publish/"
 }

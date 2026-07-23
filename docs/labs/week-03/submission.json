@@ -11,6 +11,6 @@
   "notes": "Static site ต้องมี index.html ที่ publish root",
   "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-03/",
   "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-03/labs/week-03/source",
-  "hasPublish": false,
-  "sourceEntries": 0
+  "hasPublish": true,
+  "sourceEntries": 9
 }

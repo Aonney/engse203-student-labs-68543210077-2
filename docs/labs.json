@@ -2,14 +2,14 @@
   {
     "week": "week-01",
     "title": "Developer Environment & GitHub Repository Setup",
-    "status": "draft",
-    "sourceOrigin": "course-starter",
-    "originalRepoUrl": "",
-    "originalCommit": "",
+    "status": "ready",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/Aonney/engse203-lab01-68543210077-2",
+    "originalCommit": "abc1234",
     "pullRequestUrl": "",
-    "submissionTag": "",
-    "testStatus": "not-tested",
-    "notes": "LAB 1 ใช้ evidence report ได้โดยไม่ต้องมี web application",
+    "submissionTag": "lab-01-submission-v1",
+    "testStatus": "pass",
+    "notes": "รัน hello.js และตรวจ environment แล้ว",
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-01/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-01/labs/week-01/source",
     "hasPublish": false,
@@ -28,8 +28,8 @@
     "notes": "นำ Vite build output ที่มี index.html เข้า publish/",
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-02/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-02/labs/week-02/source",
-    "hasPublish": false,
-    "sourceEntries": 0
+    "hasPublish": true,
+    "sourceEntries": 10
   },
   {
     "week": "week-03",
@@ -44,8 +44,8 @@
     "notes": "Static site ต้องมี index.html ที่ publish root",
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-685432100772/labs/week-03/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-685432100772/tree/lab/week-03/labs/week-03/source",
-    "hasPublish": false,
-    "sourceEntries": 0
+    "hasPublish": true,
+    "sourceEntries": 8
   },
   {
     "week": "week-04",

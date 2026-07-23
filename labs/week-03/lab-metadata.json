@@ -1,12 +1,12 @@
 {
   "week": "week-03",
   "title": "Responsive Web UI & Form Interaction",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
+  "status": "completed",
+  "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "",
   "originalCommit": "",
   "pullRequestUrl": "",
   "submissionTag": "",
-  "testStatus": "not-tested",
+  "testStatus": "pass",
   "notes": "Static site ต้องมี index.html ที่ publish root"
 }

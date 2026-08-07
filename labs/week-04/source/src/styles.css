@@ -48,4 +48,108 @@ form > button, .filter-active { border: 0; border-radius: .6rem; padding: .65rem
 }
 
 /* TODO LAB4-R12: เพิ่ม focus-visible, aria-invalid และ state/badge styles */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: .2rem solid #f4b942;
+  outline-offset: .15rem;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--danger);
+  outline-color: var(--danger);
+}
+
+.status {
+  min-height: 1.2rem;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  margin-top: .5rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: .22rem .55rem;
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.status-pending {
+  color: #7a4f01;
+  background: #fff1c2;
+}
+
+.status-in-progress {
+  color: #075985;
+  background: #dff3ff;
+}
+
+.status-completed {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.priority-urgent {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.empty-state {
+  padding: 1.5rem;
+  border: 2px dashed var(--border);
+  border-radius: .75rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+
+/* LAB4-R12: Responsive 375px */
+
+@media (max-width: 375px) {
+  .container {
+    width: calc(100% - 1.25rem);
+  }
+
+  .hero {
+    padding: 1.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .panel {
+    padding: .9rem;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .request-card {
+    flex-direction: column;
+  }
+
+  .request-card button {
+    width: 100%;
+  }
+
+  .filter-bar {
+    width: 100%;
+  }
+
+  .filter-button {
+    flex: 1 1 auto;
+  }
+}
+
 

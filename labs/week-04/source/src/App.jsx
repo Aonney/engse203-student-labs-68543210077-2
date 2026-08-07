@@ -26,17 +26,39 @@ function App() {
     }
     return r.status === statusFilter;
   });
+  
+  function createRequestId(requests) {
+  const nextNumber =
+    requests.reduce((max, request) => {
+      const number = Number(request.id.replace('REQ-', ''));
+      return Number.isNaN(number) ? max : Math.max(max, number);
+    }, 0) + 1;
+
+  return `REQ-${String(nextNumber).padStart(3, '0')}`;
+}
 
   function handleAddRequest(requestData) {
-    console.log('TODO add request', requestData);
+    setRequests((currentRequests) => {
+      const newRequest = {
+        id: createRequestId(currentRequests),
+        ...requestData,
+        status: 'pending',
+      };
+
+      return [newRequest, ...currentRequests];
+    });
   }
 
   function handleDeleteRequest(requestId) {
-    console.log('TODO delete request', requestId);
+    setRequests((currentRequests) =>
+      currentRequests.filter(
+        (request) => request.id !== requestId
+      )
+    );
   }
 
-  return (
-    <>
+    return (
+      <>
       <AppHeader
         title="Campus Service Request"
         subtitle="LAB 4 Starter — เปลี่ยน DOM-driven UI เป็น State-driven React UI"

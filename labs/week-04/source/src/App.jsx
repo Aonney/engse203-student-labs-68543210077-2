@@ -21,7 +21,9 @@ function App() {
 
   // TODO LAB4-R08: คำนวณ filteredRequests จาก requests + statusFilter
   const filteredRequests = requests.filter((r) => {
-    if (statusFilter === 'all') return true;
+    if (statusFilter === 'all') {
+      return true;
+    }
     return r.status === statusFilter;
   });
 

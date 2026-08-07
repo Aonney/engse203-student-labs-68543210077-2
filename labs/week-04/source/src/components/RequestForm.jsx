@@ -93,6 +93,8 @@ function RequestForm({ onAddRequest }) {
             name="requesterName"
             value={formData.requesterName}
             onChange={handleChange}
+            aria-invalid={Boolean(errors.requesterName)} 
+            aria-describedby="requesterName-error"
           />
           <small className="error" id="requesterName-error">
             {errors.requesterName}
@@ -107,6 +109,8 @@ function RequestForm({ onAddRequest }) {
             value={formData.requestType}
             onChange={handleChange}
             defaultValue=""
+            aria-invalid={Boolean(errors.requestType)} 
+            aria-describedby="requestType-error"
           >
             <option value="">-- เลือกประเภท --</option>
             <option value="แจ้งซ่อม">แจ้งซ่อม</option>
@@ -125,6 +129,8 @@ function RequestForm({ onAddRequest }) {
             name="location"
             value={formData.location}
             onChange={handleChange}
+            aria-invalid={Boolean(errors.location)} 
+            aria-describedby="location-error"
           />
           <small className="error" id="location-error">
             {errors.location}
@@ -139,6 +145,8 @@ function RequestForm({ onAddRequest }) {
             rows="4"
             value={formData.details}
             onChange={handleChange}
+            aria-invalid={Boolean(errors.details)} 
+            aria-describedby="details-error"
           ></textarea>
           <small className="error" id="details-error">
             {errors.details}
@@ -147,8 +155,13 @@ function RequestForm({ onAddRequest }) {
 
         <fieldset className="field">
           <legend>ความเร่งด่วน</legend>
-          <label><input type="radio" name="priority" value="normal" checked={formData.priority === 'normal'} onChange={handleChange} /> ปกติ</label>
-          <label><input type="radio" name="priority" value="urgent" checked={formData.priority === 'urgent'} onChange={handleChange} /> เร่งด่วน</label>
+          <label><input type="radio" name="priority" value="normal" 
+            aria-invalid={Boolean(errors.priority)} 
+            aria-describedby="priority-error"
+            checked={formData.priority === 'normal'} onChange={handleChange} /> ปกติ</label>
+          <label><input type="radio" name="priority" value="urgent" aria-invalid={Boolean(errors.priority)} 
+            aria-describedby="priority-error"
+            checked={formData.priority === 'urgent'} onChange={handleChange} /> เร่งด่วน</label>
           <small className="error" id="priority-error">
             {errors.priority}
           </small>

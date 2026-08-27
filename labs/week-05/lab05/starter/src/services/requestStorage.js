@@ -54,37 +54,14 @@ function validateRequests(requests) {
  */
 export function readStoredRequests() {
   const rawValue = localStorage.getItem(STORAGE_KEY);
-
-  if (rawValue === null) {
-    return { status: 'missing' };
-  }
+  if (rawValue === null) return { status: 'missing' };
 
   try {
     const envelope = JSON.parse(rawValue);
-
-    if (!envelope || envelope.schemaVersion !== SCHEMA_VERSION) {
-      return {
-        status: 'invalid',
-        reason: 'schemaVersion ไม่ตรงกับเวอร์ชันปัจจุบัน',
-      };
-    }
-
-    if (!validateRequests(envelope.requests)) {
-      return {
-        status: 'invalid',
-        reason: 'ข้อมูลคำร้องไม่ตรง schema หรือมี ID ซ้ำ',
-      };
-    }
-
-    return {
-      status: 'valid',
-      requests: structuredClone(envelope.requests),
-    };
+    // TODO 5B-A2: ตรวจ schemaVersion และ validateRequests ให้ครบใน CP04b
+    return { status: 'valid', requests: structuredClone(envelope.requests) };
   } catch {
-    return {
-      status: 'invalid',
-      reason: 'ข้อมูลที่บันทึกไว้ไม่ใช่ JSON ที่อ่านได้',
-    };
+    return { status: 'invalid', reason: 'ข้อมูลที่บันทึกไว้ไม่ใช่ JSON ที่อ่านได้' };
   }
 }
 

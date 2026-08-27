@@ -1,12 +1,12 @@
 {
-  "week": "week-04",
-  "title": "React Campus Service Request",
+  "week": "week-05",
+  "title": "React Routing Data Fetching Mini App",
   "status": "completed",
   "sourceOrigin": "migrated-repository",
-  "originalRepoUrl": "",
-  "originalCommit": "",
-  "pullRequestUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2/pull/5",
-  "submissionTag": "",
-  "testStatus": "not-tested",
-  "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub"
+  "originalRepoUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2",
+  "originalCommit": "751a9b9",
+  "pullRequestUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2/pull/8",
+  "submissionTag": "submission-v1",
+  "testStatus": "pass",
+  "notes": "ENGSE203 LAB05 checker v2 ผ่าน 133/133 รายการ และต้องทดสอบ TC-L5 runtime/manual ใน browser ต่อ"
 }

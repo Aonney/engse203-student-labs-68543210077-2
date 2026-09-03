@@ -112,22 +112,34 @@ function DashboardPage() {
         <>
           <SummaryPanel summary={summary} />
           <section className="panel" aria-labelledby="request-list-title">
-            <div className="section-heading">
-              <h2 id="request-list-title">รายการคำร้อง</h2>
-              <FilterBar value={statusFilter} onFilterChange={setStatusFilter} />
-            </div>
-            {/* TODO B2: วางช่อง <input> ค้นหา ตรงนี้ (เหนือรายการ) แล้วกรองร่วมกับตัวกรองสถานะ ค้นจากประเภท/สถานที่ */}
-            <input
-                className="search-input"
-                type="search"
-                placeholder="ค้นหาจากประเภทหรือสถานที่"
-                value={searchText}
-                onChange={(event) => setSearchText(event.target.value)}
-                aria-label="ค้นหาจากประเภทหรือสถานที่"
-              />
-            {/* TODO B3: ส่ง onAcknowledge={handleAcknowledge} ให้ RequestList เพื่อให้การ์ด pending มีปุ่ม "รับเรื่อง" */}
-            <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
-          </section>
+          <div className="section-heading">
+            <h2 id="request-list-title">รายการคำร้อง</h2>
+            <FilterBar
+              value={statusFilter}
+              onFilterChange={setStatusFilter}
+            />
+          </div>
+
+          <input
+            className="search-input"
+            type="search"
+            placeholder="ค้นหาจากประเภทหรือสถานที่"
+            value={searchText}
+            onChange={(event) => setSearchText(event.target.value)}
+            aria-label="ค้นหาจากประเภทหรือสถานที่"
+          />
+
+          {filteredRequests.length === 0 ? (
+            <p className="subtle-empty">
+              ไม่พบคำร้องที่ตรงกับการค้นหา
+            </p>
+          ) : (
+            <RequestList
+              requests={filteredRequests}
+              onDeleteRequest={handleDelete}
+            />
+          )}
+        </section>
         </>
       )}
     </section>

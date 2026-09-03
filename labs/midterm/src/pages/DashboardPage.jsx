@@ -62,7 +62,7 @@ function DashboardPage() {
       request.requestType.toLowerCase().includes(keyword) ||
       request.location.toLowerCase().includes(keyword);
 
-    return matchesStatus && matchesSearch;
+    return matchesStatus && matchesSearch;//CP-B2.3
   });
 
   function handleRetry() {

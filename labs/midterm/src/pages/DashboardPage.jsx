@@ -79,7 +79,19 @@ function DashboardPage() {
       setNotice(error instanceof Error ? error.message : 'ลบคำร้องไม่สำเร็จ');
     }
   }
-
+      async function handleAcknowledge(requestId) {
+      try {
+        const nextRequests = await updateRequestStatus(requestId, 'in-progress');
+        setRequests(nextRequests);
+        setNotice(`รับเรื่อง ${requestId} แล้ว`);
+      } catch (error) {
+        setNotice(
+          error instanceof Error
+            ? error.message
+            : 'รับเรื่องไม่สำเร็จ'
+        );
+      }
+    }
 
   async function handleReset() {
     if (!window.confirm('ต้องการคืนข้อมูลตัวอย่างเริ่มต้นหรือไม่?')) return;
@@ -137,6 +149,7 @@ function DashboardPage() {
             <RequestList
               requests={filteredRequests}
               onDeleteRequest={handleDelete}
+              onAcknowledge={handleAcknowledge}
             />
           )}
         </section>

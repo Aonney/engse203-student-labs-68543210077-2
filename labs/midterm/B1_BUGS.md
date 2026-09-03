@@ -35,14 +35,14 @@
 | 1 | Console เตือนสีเหลืองเรื่องรายการ (list) ที่แผงสรุป | src/components/SummaryPanel.jsx : {items.map(...)} | ใน items.map() ใช้ key={item.status} แต่ item เป็น array เช่น ['total', 'ทั้งหมด'] จึงไม่มี property status ทำให้ React ไม่ได้รับ key ที่ถูกต้อง| เปลี่ยนจาก key={item.status} เป็นการ destructuring ([status, label]) แล้วใช้ key={status} |
 | 2 | ตัวเลข "เสร็จสิ้น" ในแผงสรุปไม่ตรงกับที่เห็นจริง | src/pages/DashboardPage.jsx : completed ใน useMemo | ตอนคำนวณจำนวน completed ใช้ request.status === 'in-progress' ทำให้เอาจำนวนคำร้องที่กำลังดำเนินการมานับเป็นเสร็จสิ้น| request.status === 'in-progress' เป็น request.status === 'completed' |
 | 3 | กดตัวกรองสถานะใด ๆ แล้วผลไม่เปลี่ยน (เหมือนกรองไม่ทำงาน) | src/pages/DashboardPage.jsx : filteredRequests | ตอนกรองรายการกำหนดสถานะเป็น 'pending' ตายตัว ทำให้ไม่ว่ากดตัวกรองสถานะไหนก็กรองเป็น pending | เปลี่ยนจาก request.status === 'pending' เป็น request.status === statusFilter เพื่อให้กรองตามสถานะที่ผู้ใช้เลือก |
-| 4 | เปลี่ยน URL `REQ-101` → `REQ-102` แล้วข้อมูลไม่เปลี่ยน |  |  |  |
-| 5 | กด "ลบ" แล้วการ์ดหาย แต่ตัวเลขในแผงสรุปไม่ลด |  |  |  |
-| 6 | กด "ลบ" แล้วหน้าพัง/ว่างเปล่า |  |  |  |
+| 4 | เปลี่ยน URL `REQ-101` → `REQ-102` แล้วข้อมูลไม่เปลี่ยน | src/pages/RequestDetailPage.jsx : useEffect | useEffect ใช้ dependency เป็น [] จึงโหลดข้อมูลแค่ครั้งแรก เมื่อ requestId ใน URL เปลี่ยน effect ไม่ทำงานใหม่ | ปลี่ยน dependency จาก [] เป็น [requestId] เพื่อให้โหลดข้อมูลใหม่ทุกครั้งที่ ID ใน URL เปลี่ยน |
+| 5 | กด "ลบ" แล้วการ์ดหาย แต่ตัวเลขในแผงสรุปไม่ลด | src/pages/DashboardPage.jsx : summary useMemo | summary ใช้ข้อมูล requests แต่ useMemo กำหนด dependency เป็น [] ทำให้หลังลบข้อมูลแล้ว summary ไม่คำนวณใหม่ | เปลี่ยน dependency จาก [] เป็น [requests] เพื่อให้ summary คำนวณใหม่เมื่อรายการคำร้องเปลี่ยน|
+| 6 | กด "ลบ" แล้วหน้าพัง/ว่างเปล่า | src/pages/DashboardPage.jsx : handleDelete | deleteRequest() เป็น async function แต่ไม่ได้ใช้ await ทำให้ nextRequests เป็น Promise แล้วนำ Promise ไปใส่ใน state requests แทนที่จะเป็น array | เปลี่ยนจาก const nextRequests = deleteRequest(requestId) เป็น const nextRequests = await deleteRequest(requestId) |
 
 ---
 
 ## เช็คก่อนส่ง
 
-- [ ] กรอกครบทั้ง 6 บั๊ก (ไฟล์:บรรทัด · สาเหตุ · แก้อย่างไร)
-- [ ] เขียนด้วยคำของตัวเอง ไม่ใช่ก๊อปคำอธิบายจาก AI มาตรง ๆ
-- [ ] ยืนยันแล้วว่าอาการทั้ง 6 หายจริงหลังแก้ (`npm run dev` แล้วลองทีละอาการ)
+- [x] กรอกครบทั้ง 6 บั๊ก (ไฟล์:บรรทัด · สาเหตุ · แก้อย่างไร)
+- [x] เขียนด้วยคำของตัวเอง ไม่ใช่ก๊อปคำอธิบายจาก AI มาตรง ๆ
+- [x] ยืนยันแล้วว่าอาการทั้ง 6 หายจริงหลังแก้ (`npm run dev` แล้วลองทีละอาการ)

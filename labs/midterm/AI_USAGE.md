@@ -1,6 +1,9 @@
 # AI Usage Log — สอบกลางภาค ENGSE203 (ภาคปฏิบัติ)
 
-**ชื่อ–นามสกุล:** ______________________ **รหัส:** ______________ **Sec:** 2 **ชุด:** B
+**ชื่อ–นามสกุล:** นายสันติ ปัญญาหน้อย  
+**รหัส:** 68543210077-2  
+**Sec:** 2  
+**ชุด:** B
 
 ---
 
@@ -24,7 +27,7 @@
 
 ---
 
-## ตัวอย่าง (ดูระดับรายละเอียดที่ต้องการ — ลบทิ้งได้ หรือปล่อยไว้ก็ได้)
+## ตัวอย่าง
 
 | เวลา | งาน | Prompt ที่ถาม | AI ตอบว่าอะไร | ฉันทำอะไรต่อ |
 |---|---|---|---|---|
@@ -35,20 +38,20 @@
 
 ---
 
-## บันทึกของฉัน (กรอกตรงนี้)
+## บันทึกของฉัน
 
 | เวลา | งาน | Prompt ที่ถาม | AI ตอบว่าอะไร | ฉันทำอะไรต่อ |
 |---|---|---|---|---|
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| 13:11 | B1 | "Bug 1 Console ขึ้น Each child in a list should have a unique key prop ต้องเขียน B1_BUGS.md ยังไง" | อธิบายว่า `items` เป็น array และตอนวนข้อมูลมีการ destructuring เป็น `[status, label]` จึงควรใช้ `key={status}` แทน `key={item.status}` | แก้ `SummaryPanel.jsx` จาก `key={item.status}` เป็น `key={status}` แล้วตรวจ Console ว่า warning หาย |
+| 13:20 | B1 | "Bug 2 ตัวเลขเสร็จสิ้นอยู่ไฟล์ไหน" | แนะนำให้ตรวจ `DashboardPage.jsx` และพบว่า `completed` ถูกนับจาก `in-progress` | เปลี่ยนเงื่อนไขจาก `request.status === 'in-progress'` เป็น `request.status === 'completed'` แล้วตรวจจำนวนใน Summary ว่าตรงกับข้อมูล |
+| 13:55 | B1 | "Bug 3 กดตัวกรองสถานะแล้วผลไม่เปลี่ยน" | พบว่า `filteredRequests` กำหนด `status === 'pending'` แบบตายตัว ทำให้ไม่เปลี่ยนตามตัวกรอง | เปลี่ยนเป็น `request.status === statusFilter` แล้วทดสอบเลือกตัวกรองแต่ละสถานะและตรวจว่ารายการเปลี่ยนตามสถานะ |
+| 14:10 | B1 | "Bug 4 เปลี่ยน URL REQ-101 เป็น REQ-102 แล้วข้อมูลไม่เปลี่ยน" | พบว่า `useEffect` ใน `RequestDetailPage.jsx` ใช้ dependency เป็น `[]` จึงไม่ทำงานใหม่เมื่อ `requestId` เปลี่ยน | เปลี่ยน dependency จาก `[]` เป็น `[requestId]` แล้วเปลี่ยน URL จาก REQ-101 เป็น REQ-102 โดยไม่ Refresh เพื่อตรวจว่าข้อมูลเปลี่ยนตาม URL |
+| 14:33 | B1 | "Bug 5 กดลบแล้วตัวเลข summary ไม่ลด" | อธิบายว่า `summary` ใช้ข้อมูลจาก `requests` แต่ `useMemo` ไม่ได้ติดตาม `requests` เพราะ dependency เป็น `[]` | เปลี่ยน dependency จาก `[]` เป็น `[requests]` แล้วทดสอบลบรายการและตรวจว่าจำนวน Summary ลดลง เช่น 5 → 4 |
+| 14:50 | B1 | "Bug 6 กดลบแล้วหน้าพัง/ว่างเปล่า" | ตรวจ `deleteRequest()` และพบว่าเป็น `async` แต่ `handleDelete` ไม่ได้ `await` ทำให้ค่าที่นำไปใส่ `requests` เป็น Promise | เปลี่ยนเป็น `const nextRequests = await deleteRequest(requestId)` แล้วทดสอบลบรายการและตรวจว่าหน้ายังแสดงผลปกติ |
+| 15:20 | B2 | "B2 Search ต้องทำ 4 checkpoint และ commit ทุก checkpoint" | แนะนำแบ่งงานเป็น B2.1 เพิ่ม state, B2.2 เพิ่ม input, B2.3 ทำ filter และ B2.4 รวม search กับ status filter | แบ่งทำตาม checkpoint ทีละขั้น และ commit หลังแต่ละ checkpoint ตามที่กำหนด |
+| 15:55 | B2 | "ตอนนี้ DashboardPage มี TODO B2 ต้องเพิ่มอะไร" | แนะนำให้เพิ่ม `const [searchText, setSearchText] = useState('')` ใน B2.1 | เพิ่ม `searchText` state ใน `DashboardPage` และตรวจว่าโค้ดยัง compile/run ได้ จากนั้นเตรียม commit `B2.1: add search text state` |
 
-*(เพิ่มแถวได้ตามต้องการ — คัดลอกบรรทัด `| | | | | |` ไปวางเพิ่ม)*
+> เพิ่มแถวได้ตามต้องการ — คัดลอกบรรทัด `| | | | | |` ไปวางเพิ่ม
 
 ---
 
@@ -56,4 +59,4 @@
 
 ฉันเข้าใจโค้ดทุกส่วนที่ส่ง และพร้อมอธิบายใน oral
 
-**ลงชื่อ:** ______________________
+**ลงชื่อ:** นายสันติ ปัญญาหน้อย

@@ -77,6 +77,22 @@
     "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-68543210077/labs/week-05/",
     "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-68543210077/tree/lab/week-05/labs/week-05/source",
     "hasPublish": true,
-    "sourceEntries": 11
+    "sourceEntries": 10
+  },
+  {
+    "week": "week-06",
+    "title": "Express API Foundation",
+    "status": "submitted",
+    "sourceOrigin": "migrated-repository",
+    "originalRepoUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2",
+    "originalCommit": "45726da",
+    "pullRequestUrl": "",
+    "submissionTag": "lab-06-submission-v1",
+    "testStatus": "pass",
+    "notes": "Express API สำหรับ Lab 06 และมี API test evidence",
+    "pageUrl": "https://Aonney-github.github.io/engse203-student-labs-68543210077/labs/week-06/",
+    "sourceUrl": "https://github.com/Aonney-github/engse203-student-labs-68543210077/tree/lab/week-06/labs/week-06/source",
+    "hasPublish": false,
+    "sourceEntries": 9
   }
 ]

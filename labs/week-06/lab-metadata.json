@@ -1,0 +1,12 @@
+{
+  "week": "week-06",
+  "title": "Express API Foundation",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2",
+  "originalCommit": "45726da",
+  "pullRequestUrl": "https://github.com/Aonney/engse203-student-labs-68543210077-2/pull/12",
+  "submissionTag": "lab-06-submission-v1",
+  "testStatus": "pass",
+  "notes": "Express API สำหรับ Lab 06 และมี API test evidence"
+}

@@ -7,7 +7,7 @@ services:
     runtime: node
     plan: free
     region: singapore
-    rootDir: labs/week-13/source          # โฟลเดอร์โปรเจกต์ใน Student Repository
+    rootDir: labs/week-13/starter          # โฟลเดอร์โปรเจกต์ใน Student Repository
     buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /api/health          # Render รอให้ตอบ 2xx ก่อนเปิดให้ใช้งาน
@@ -16,6 +16,8 @@ services:
         value: production
       - key: NODE_VERSION
         value: "22"
+      - key: CORS_ORIGIN
+        value: https://aonney.github.io
       - key: JWT_SECRET
         generateValue: true                       # node:sqlite ใช้ได้ไม่ต้องใส่ flag ตั้งแต่ 22.13
       # ไม่ต้องตั้ง PORT — Render กำหนดให้เอง (ค่าเริ่มต้น 10000) และ config.js อ่านจาก process.env.PORT
